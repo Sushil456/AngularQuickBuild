@@ -1,0 +1,11 @@
+mat-form-field{
+  width: 100%;
+
+}
+
+mat-card{
+  width: 35%;
+  min-width: 35%;
+  max-width: 50%;
+}
+

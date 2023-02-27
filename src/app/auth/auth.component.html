@@ -3,7 +3,7 @@
 background: linear-gradient(15deg, rgba(2,0,36,1) 0%, rgba(14,166,154,1) 47%, rgba(0,212,255,1) 100%); ">
 
 
-    <div style="display: flex;justify-content: center;margin-top: 12%;">
+    <div style="display: flex;justify-content: center;margin-top:6%; margin-bottom: 5%;" *ngIf="!ifloginshow">
       <mat-card style="color: #047a71;">
 
         <mat-card-header style="display: flex;justify-content: center;align-items: center;">
@@ -19,6 +19,7 @@ background: linear-gradient(15deg, rgba(2,0,36,1) 0%, rgba(14,166,154,1) 47%, rg
               <mat-label>Username</mat-label>
               <input matInput placeholder="Username" >
               <mat-icon matSuffix>face</mat-icon>
+              <mat-error>Invalid Username</mat-error>
             </mat-form-field>
             <br>
             <mat-form-field appearance="outline" >
@@ -30,7 +31,56 @@ background: linear-gradient(15deg, rgba(2,0,36,1) 0%, rgba(14,166,154,1) 47%, rg
         </mat-card-content>
         <mat-card-actions style="display: flex;
         justify-content: center;align-items: center;">
-          <button mat-raised-button style="background-color: #047a71;color: white;width: 37%;height: 35px; font-size: 24px;">Login</button>
+          <button mat-raised-button style="background-color: #047a71;color: white;width: 37%;height: 38px; font-size: 24px;padding: 8px;margin-bottom: 8px;">Login</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+    <!-- sign up  -->
+
+    <div style="display: flex;justify-content: center;margin-top:6%; margin-bottom: 5%;" *ngIf="ifloginshow">
+      <mat-card style="color: #047a71;">
+
+        <mat-card-header style="display: flex;justify-content: center;align-items: center;">
+          <mat-card-title style="font-size: 31px;color: #047a71;">
+            Register
+          </mat-card-title>
+        </mat-card-header>
+
+        <mat-divider style="margin-top: 8px;margin-bottom: 8px;"></mat-divider>
+        <mat-card-content >
+          <form>
+            <mat-form-field appearance="outline">
+              <mat-label>Username</mat-label>
+              <input matInput placeholder="Username" >
+              <mat-icon matSuffix>face</mat-icon>
+              <mat-error>Invalid Username</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="outline" >
+              <mat-label>Email ID</mat-label>
+              <input matInput placeholder="Email ID" >
+              <mat-icon matSuffix>email</mat-icon>
+              <mat-error>Invalid Email ID</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="outline" >
+              <mat-label>Password</mat-label>
+              <input matInput placeholder="Password" >
+              <mat-icon matSuffix>security</mat-icon>
+            </mat-form-field><br>
+            <mat-form-field appearance="outline" >
+              <mat-label>Confirm Password</mat-label>
+              <input matInput placeholder="Confirm Password" >
+              <mat-icon matSuffix>security</mat-icon>
+              <mat-error>Password do not matched</mat-error>
+            </mat-form-field><br>
+
+          </form>
+        </mat-card-content>
+        <mat-card-actions style="display: flex;
+        justify-content: center;align-items: center;">
+          <button mat-raised-button style="background-color: #047a71;color: white;width: 37%;height: 38px; font-size: 24px;padding: 8px;margin-bottom: 8px;">Register</button>
         </mat-card-actions>
       </mat-card>
     </div>
